@@ -1,4 +1,3 @@
-
 import "./style.css";
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
@@ -16,7 +15,6 @@ function App() {
 
   useEffect(() => {
     const mockCharacters = [
-
       {
         id: 1,
         name: "Spider-Man",
@@ -142,16 +140,10 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-white text-white gap-y-96">
       <Navbar onSearch={handleSearch} onAddCharacter={handleAddCharacter} />
 
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-6 text-center animate-pulse">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-500">
-            MARVELLE CHARACTERS
-          </span>
-        </h1>
-
+      <div className="container mx-auto px-4 py-8 pt-28">
         <CharacterTable
           characters={filteredCharacters}
           onEdit={handleEditCharacter}
@@ -175,11 +167,8 @@ function App() {
         />
       )}
 
-      <footer className="py-6 text-center text-gray-400">
-        <p>Projet Fullstack Marvel - React + Express.js</p>
-        <p className="mt-2 text-sm">
-          Technologies: React, Vite, Tailwind CSS, Express.js
-        </p>
+      <footer className="py-6 text-center text-black">
+        <p>Herinjaka RASOLONJAHARY</p>
       </footer>
     </div>
   );
